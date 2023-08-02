@@ -1,0 +1,1 @@
+GET http://localhost:3000/cocktail/prompt?promptField=c_name&promptText=martini HTTP/1.1
