@@ -7,5 +7,7 @@ const ingredientSchema = new mongoose.Schema({
 
 const Ingredient = mongoose.model('Ingredient', ingredientSchema);
 
-module.exports.ingredientSchema = ingredientSchema
-module.exports.Ingredient = Ingredient
+module.exports = {
+    ingredientSchema: ingredientSchema,
+    Ingredient: Ingredient
+}

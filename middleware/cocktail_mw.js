@@ -19,11 +19,8 @@ process_prompt = (promptList) => {
 
     //  4) alcohol? Alcoholic or Non alcoholic
 
-
-
-    return {}
+    return {};
 }
-
 
 module.exports = {
     process_prompt: process_prompt

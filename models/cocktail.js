@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const { ingredientSchema } = require('./ingredient')
 
-
 const cocktailSchema = new mongoose.Schema({
     '_id': {
         'type': Number,
@@ -25,7 +24,6 @@ const cocktailSchema = new mongoose.Schema({
 });
 
 const Cocktail = mongoose.model('Cocktail', cocktailSchema);
-
 
 module.exports = {
     cocktailSchema: cocktailSchema,
