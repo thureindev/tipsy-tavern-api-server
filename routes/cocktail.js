@@ -6,11 +6,13 @@ const logic = require('../middleware/cocktail_mw.js');
 
 // Function to update the cocktail count in DB
 async function updateCocktailCountInDB() {
-    return await Cocktail.count().exec();
+    return await Cocktail.countDocuments();
 }
-// get total count
-var cocktail_count_in_db = updateCocktailCountInDB();
-
+// Initialize the count variable
+var cocktail_count_in_db;
+updateCocktailCountInDB().then(count => {
+    cocktail_count_in_db = count;
+});
 // limit result in prompts
 const LIMIT_RESULT = 30
 
