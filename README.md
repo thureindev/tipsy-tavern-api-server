@@ -1,1 +1,1 @@
-# Server code for Tipsy Tavern app
+# Tipsy Tavern API server
