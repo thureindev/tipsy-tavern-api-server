@@ -52,10 +52,10 @@ router.route('/prompt')
         var cocktails;
 
         if (field == "c_name") {
-            cocktails = await Cocktail.find({ name: { $in: promptList } }).limit(LIMIT_RESULT).exec();
+            cocktails = await Cocktail.find({ "name": { $in: promptList } }).limit(LIMIT_RESULT).exec();
         }
         else if (field == "ingredient") {
-            cocktails = await Cocktail.find({ glass: { $in: promptList } }).limit(LIMIT_RESULT).exec();
+            cocktails = await Cocktail.find({ "ingredients.item": { $in: promptList } }).exec();
         }
         else {
             cocktails = { "response": 200, "data": [{ "nothing": "nothing" }] }
